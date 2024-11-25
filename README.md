@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+1. Importar biblioteca:
+import React, { useState } from 'react';: Importe as funções React e useState para criar e gerenciar o estado do componente.
+import { Media } from 'reactstrap';: Importe o componente Media do Reactstrap, o que facilita a criação de layouts responsivos no React usando Bootstrap.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+2. Defina os componentes do menu:
+O componente Menu é uma função que retorna a estrutura HTML da página.
+Dentro do componente, o gancho useState é usado para armazenar uma lista de pratos (chamados de pratos).
 
-## Available Scripts
+3. Crie um cardápio:
+As constantes do menu são geradas usando a função .map(), que percorre a lista de pratos e cria um conjunto de elementos HTML.
+Cada prato é representado por uma <div> com classes para organizar o layout.
+Dentro do <div> , o componente Media do Reactstrap é usado para exibir:
+Imagem do prato à esquerda (<media left center>).
+Nome e descrição do prato à direita (<texto da mídia>).
 
-In the project directory, you can run:
+4. Atualização da Página:
+O componente fornece uma estrutura HTML que contém um container (uma área central).
+Em uma linha, os pratos são organizados e mostrados como uma lista utilizando a <Media list>.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+5. Organização dos Pratos:
+Cada porção inclui:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Id: Número exclusivo do prato.
 
-### `npm test`
+Nome: Título do prato.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Imagem: Rota da imagem da refeição.
 
-### `npm run build`
+categoria: Tipo de prato (por exemplo, "principal", "appetizer").
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+etiqueta: Etiqueta especial (como "Quente", "Novo").
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Preço: Valor do prato.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+descrição: Descrição da refeição.
 
-### `npm run eject`
+6. Conclusão Final:
+Ao ser exibido, o componente exibe:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Uma lista de refeições, cada uma contendo:
+Imagem localizada à esquerda.
+Em destaque está o nome do prato.
+Descrição do prato na imagem ao lado.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+7. Comercialização:
+O componente Menu é exportado ao término, possibilitando seu uso em outros locais do código.
